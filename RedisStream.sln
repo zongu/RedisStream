@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisStream", "RedisStream\RedisStream.csproj", "{8CC591A0-09E7-44A7-933C-CBAA12F50ECE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisStream.Ap", "RedisStream.Ap\RedisStream.Ap.csproj", "{0CB63E16-4554-4251-8F39-3507443C62A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8CC591A0-09E7-44A7-933C-CBAA12F50ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CC591A0-09E7-44A7-933C-CBAA12F50ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CC591A0-09E7-44A7-933C-CBAA12F50ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB63E16-4554-4251-8F39-3507443C62A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB63E16-4554-4251-8F39-3507443C62A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB63E16-4554-4251-8F39-3507443C62A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB63E16-4554-4251-8F39-3507443C62A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

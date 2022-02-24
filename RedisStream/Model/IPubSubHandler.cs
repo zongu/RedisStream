@@ -5,7 +5,7 @@ namespace RedisStream.Model
     /// 處裡事件介面
     /// </summary>
     /// <typeparam name="TEventStream"></typeparam>
-    public interface IRedisStreamHandler<TEventStream>
+    public interface IPubSubHandler<TEventStream>
         where TEventStream : EventStream
     {
         /// <summary>

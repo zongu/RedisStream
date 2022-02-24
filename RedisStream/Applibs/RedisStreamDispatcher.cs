@@ -14,14 +14,14 @@ namespace RedisStream.Applibs
         /// <summary>
         /// handler集合
         /// </summary>
-        private IIndex<string, IRedisStreamHandler<EventStream>> handlerSets;
+        private IIndex<string, IPubSubHandler<TEventStream>> handlerSets;
 
         /// <summary>
         /// 發生錯誤時 callback回寫
         /// </summary>
         private Action<Exception> errorCallBack;
 
-        public RedisStreamDispatcher(Action<Exception> errorCallBack, IIndex<string, IRedisStreamHandler<EventStream>> handlerSets)
+        public RedisStreamDispatcher(Action<Exception> errorCallBack, IIndex<string, IPubSubHandler<TEventStream>> handlerSets)
         {
             this.handlerSets = handlerSets;
             this.errorCallBack = errorCallBack;

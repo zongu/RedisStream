@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CC591A0-09E7-44A7-933C-CBAA12F50ECE}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RedisStream</RootNamespace>
-    <AssemblyName>RedisStream</AssemblyName>
+    <ProjectGuid>{0CB63E16-4554-4251-8F39-3507443C62A1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RedisStream.Ap</RootNamespace>
+    <AssemblyName>RedisStream.Ap</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,6 +52,7 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -89,20 +92,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Applibs\RedisStreamConsumer.cs" />
-    <Compile Include="Applibs\RedisStreamGroupConsumer.cs" />
-    <Compile Include="Applibs\RedisStreamDispatcher.cs" />
-    <Compile Include="Applibs\RedisStreamFactory.cs" />
-    <Compile Include="Applibs\RedisStreamProducer.cs" />
-    <Compile Include="Model\EventStream.cs" />
-    <Compile Include="Model\IPubSubDispatcher.cs" />
-    <Compile Include="Model\IPubSubHandler.cs" />
-    <Compile Include="Model\RedisStreamEventStream.cs" />
+    <Compile Include="Applibs\AutofacConfig.cs" />
+    <Compile Include="Applibs\ConfigHelper.cs" />
+    <Compile Include="Applibs\NoSqlService.cs" />
+    <Compile Include="Model\Event\MessageAEvent.cs" />
+    <Compile Include="Model\Event\MessageBEvent.cs" />
+    <Compile Include="Model\IProcess.cs" />
+    <Compile Include="Model\ProducerAProcess.cs" />
+    <Compile Include="Model\ProducerBProcess.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RedisStream\RedisStream.csproj">
+      <Project>{8cc591a0-09e7-44a7-933c-cbaa12f50ece}</Project>
+      <Name>RedisStream</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

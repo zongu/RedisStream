@@ -13,4 +13,11 @@ namespace RedisStream.Model
             UtcTimeStamp = utcTimeStamp;
         }
     }
+
+    /// <summary>
+    /// RedisStream處裡事件介面
+    /// </summary>
+    public interface IRedisStreamHandler : IPubSubHandler<RedisStreamEventStream>
+    {
+    }
 }
