@@ -95,6 +95,10 @@
     <Compile Include="Applibs\AutofacConfig.cs" />
     <Compile Include="Applibs\ConfigHelper.cs" />
     <Compile Include="Applibs\NoSqlService.cs" />
+    <Compile Include="Handler\MessageAEventHandler.cs" />
+    <Compile Include="Handler\MessageBEventHandler.cs" />
+    <Compile Include="Model\ConsumerAProcess.cs" />
+    <Compile Include="Model\ConsumerBProcess.cs" />
     <Compile Include="Model\Event\MessageAEvent.cs" />
     <Compile Include="Model\Event\MessageBEvent.cs" />
     <Compile Include="Model\IProcess.cs" />

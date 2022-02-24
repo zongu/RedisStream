@@ -16,7 +16,7 @@ namespace RedisStream.Applibs
         private static bool isWork = false;
 
         public static bool IsWork
-            => IsWork;
+            => isWork;
 
         public static void Start(ConnectionMultiplexer conn, int dataBase = 15)
         {
