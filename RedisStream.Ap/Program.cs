@@ -17,12 +17,13 @@ namespace RedisStream.Ap
 
                 var cmd = string.Empty;
 
-                if (!new string[] { "1", "2", "3", "4"}.Contains(cmd))
+                if (!new string[] { "1", "2", "3", "4", "5"}.Contains(cmd))
                 {
                     Console.WriteLine("1.ProducerA");
                     Console.WriteLine("2.ProducerB");
                     Console.WriteLine("3.ConsumerA");
                     Console.WriteLine("4.ConsumerB");
+                    Console.WriteLine("5.ConsumerPlural");
 
                     cmd = Console.ReadLine();
                 }
@@ -32,6 +33,7 @@ namespace RedisStream.Ap
                     cmd == "2" ? new ProducerBProcess() :
                     cmd == "3" ? new ConsumerAProcess() :
                     cmd == "4" ? new ConsumerBProcess() :
+                    cmd == "5" ? new ConsumerPluralProcess() :
                     (IProcess)null;
 
                 process?.Execute();

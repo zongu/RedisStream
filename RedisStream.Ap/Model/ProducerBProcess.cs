@@ -21,9 +21,9 @@ namespace RedisStream.Ap.Model
                 {
                     try
                     {
-                        RedisStreamProducer.Publish(topic, new MessageAEvent()
+                        RedisStreamProducer.Publish(topic, new MessageBEvent()
                         {
-                            Message = $"MessageAEvent-{++count}"
+                            Message = $"MessageBEvent-{++count}"
                         });
                     }
                     catch (Exception ex)
