@@ -103,6 +103,7 @@
     <Compile Include="Model\GroupConsumerAProcess.cs" />
     <Compile Include="Model\Event\MessageAEvent.cs" />
     <Compile Include="Model\Event\MessageBEvent.cs" />
+    <Compile Include="Model\GroupConsumerBProcess.cs" />
     <Compile Include="Model\IProcess.cs" />
     <Compile Include="Model\ProducerAProcess.cs" />
     <Compile Include="Model\ProducerBProcess.cs" />
