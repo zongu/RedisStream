@@ -24,6 +24,7 @@ namespace RedisStream.Ap
                     Console.WriteLine("3.ConsumerA");
                     Console.WriteLine("4.ConsumerB");
                     Console.WriteLine("5.ConsumerPlural");
+                    Console.WriteLine("6.ConsumerGroupA");
 
                     cmd = Console.ReadLine();
                 }
@@ -34,6 +35,7 @@ namespace RedisStream.Ap
                     cmd == "3" ? new ConsumerAProcess() :
                     cmd == "4" ? new ConsumerBProcess() :
                     cmd == "5" ? new ConsumerPluralProcess() :
+                    cmd == "6" ? new GroupConsumerAProcess() :
                     (IProcess)null;
 
                 process?.Execute();

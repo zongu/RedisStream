@@ -100,6 +100,7 @@
     <Compile Include="Model\ConsumerAProcess.cs" />
     <Compile Include="Model\ConsumerBProcess.cs" />
     <Compile Include="Model\ConsumerPluralProcess.cs" />
+    <Compile Include="Model\GroupConsumerAProcess.cs" />
     <Compile Include="Model\Event\MessageAEvent.cs" />
     <Compile Include="Model\Event\MessageBEvent.cs" />
     <Compile Include="Model\IProcess.cs" />
